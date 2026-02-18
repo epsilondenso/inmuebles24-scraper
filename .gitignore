@@ -1,0 +1,37 @@
+# Secrets & local config
+.env
+.env.local
+*.pem
+*.key
+
+# Scraper output (data, cookies, browser state)
+output/
+*.xlsx
+*.csv
+*.jsonl
+!docs/sample_output_columns.json
+
+# Browser profiles & debug artifacts
+**/chrome_profile/
+**/drission_profile/
+**/browser_cookies.json
+**/checkpoint.json
+debug_*.html
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

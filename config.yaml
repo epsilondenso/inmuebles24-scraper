@@ -1,0 +1,21 @@
+# Inmuebles24 scraper configuration — Nuevo León
+
+search_urls:
+  sale:
+    base: "https://www.inmuebles24.com/inmuebles-en-venta-en-nuevo-leon-ordenado-por-fechaonline-descendente"
+    page_pattern: "{base}-pagina-{page}.html"  # page 1 uses {base}.html
+  rent:
+    base: "https://www.inmuebles24.com/inmuebles-en-renta-en-nuevo-leon-ordenado-por-fechaonline-descendente"
+    page_pattern: "{base}-pagina-{page}.html"
+
+scraping:
+  max_listing_pages: null   # null = all pages until empty
+  max_properties: null      # null = no limit
+  listing_pages_per_session: 4   # restart browser every N pages (anti-bot)
+  details_per_session: 25        # restart browser every N detail pages
+
+output:
+  directory: "output"
+  urls_file: "property_urls.jsonl"
+  details_file: "properties.xlsx"
+  checkpoint_file: "checkpoint.json"
