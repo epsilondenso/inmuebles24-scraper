@@ -20,7 +20,7 @@ def discover_urls(
     listing_types: list[str] | None = None,
 ) -> int:
     """Crawl search pages and append unique property URLs. Returns count of new URLs."""
-    listing_types = listing_types or ["sale", "rent"]
+    listing_types = ["sale"]#listing_types or ["sale", "rent"]
     checkpoint = storage.load_checkpoint()
     pages_done = checkpoint.get("listing_pages_done", {})
     new_count = 0

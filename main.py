@@ -62,7 +62,7 @@ def cmd_extract(config: dict, storage: Storage, args: argparse.Namespace) -> Non
         storage.clear_details()
         storage.save_checkpoint({"details_index": 0, "phase": "extract"})
 
-    count = extract_details(config, storage, limit=args.limit, force=force)
+    count = extract_details(config, storage, force=force)#limit=args.limit, 
     print(f"Extraction complete. {count} properties scraped.")
     print(f"Excel: {storage.details_path}")
     print(f"CSV:   {storage.details_csv_path}")
