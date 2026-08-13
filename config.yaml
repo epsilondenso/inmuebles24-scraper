@@ -2,7 +2,7 @@
 
 search_urls:
   sale:
-    base: "https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-morelos-provincia-ordenado-por-fechaonline-descendente.html"
+    base: "https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-edo.-de-mexico-ordenado-por-fechaonline-descendente.html"
     page_pattern: "{base}-pagina-{page}.html"  # page 1 uses {base}.html
   rent:
     base: "https://www.inmuebles24.com/casas-en-renta-en-benito-juarez-ordenado-por-fechaonline-descendente.html"
