@@ -19,8 +19,9 @@ while read  -r URL && read -r NAME <&3
    do
       NAME="${NAME// /}"
       sed -i "s|^\([[:space:]]*\)base:.*|\1base: $URL|" config.yaml
-      sed -i "s|^\([[:space:]]*\)urls_file:.*|\1urls_file: \"${NAME}_urls.json\"|" config.yaml
+      sed -i "s|^\([[:space:]]*\)urls_file:.*|\1urls_file: \"urls_${NAME}.json\"|" config.yaml
       sed -i "s|^\([[:space:]]*\)details_file:.*|\1details_file: \"properties_${NAME}.xlsx\"|" config.yaml
+      sed -i "s|^\([[:space:]]*\)details_file:.*|\1details_file_csv: \"properties_${NAME}.csv\"|" config.yaml
       sed -i "s|^\([[:space:]]*\)checkpoint_file:.*|\1checkpoint_file: \"checkpoint_${NAME}.json\"|" config.yaml
       run 
       

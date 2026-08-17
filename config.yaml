@@ -14,6 +14,7 @@ scraping:
   details_per_session: 25 # restart browser every N detail pages
 output:
   directory: "output"
-  urls_file: "Guanajuato_urls.json"
+  urls_file: "Guanajuato_urls.jsonl"
   details_file: "properties_Guanajuato.xlsx"
+  details_file_csv: "properties_Guanajuato.csv"
   checkpoint_file: "checkpoint_Guanajuato.json"

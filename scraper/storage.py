@@ -6,8 +6,21 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
-
+import yaml
 import pandas as pd
+
+#read config.yaml:
+import yaml
+
+with open("config.yaml", "r", encoding="utf-8") as f:
+    config = yaml.safe_load(f)
+
+config = config["output"]
+
+urls_file = config["urls_file"]
+properties_excel = config["details_file"]
+properties_csv = config["details_file_csv"]
+checkpoint = config["checkpoint_file"]
 
 # Columns aligned with Inmuebles24 project scope / Excel template
 OUTPUT_COLUMNS = [
@@ -33,10 +46,10 @@ class Storage:
     def __init__(self, output_dir: str = "output") -> None:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
-        self.urls_path = self.output_dir / "property_urls.jsonl"
-        self.details_path = self.output_dir / "properties.xlsx"
-        self.details_csv_path = self.output_dir / "properties.csv"
-        self.checkpoint_path = self.output_dir / "checkpoint.json"
+        self.urls_path = self.output_dir / urls_file
+        self.details_path = self.output_dir / properties_excel
+        self.details_csv_path = self.output_dir / properties_csv
+        self.checkpoint_path = self.output_dir / checkpoint
         self._seen_urls: set[str] = set()
         self._seen_ids: set[str] = set()
         self._replace_on_next_write = False
