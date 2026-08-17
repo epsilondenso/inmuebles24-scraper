@@ -1,2 +1,2 @@
 Discovery complete. 30 new property URLs added.
-URL list: output\urls_Zacatecas.json
+URL list: output\urls_Coahuila.jsonl
