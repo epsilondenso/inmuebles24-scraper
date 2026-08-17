@@ -1,2 +1,2 @@
-Discovery complete. 0 new property URLs added.
-URL list: output\property_urls.jsonl
+Discovery complete. 30 new property URLs added.
+URL list: output\urls_Zacatecas.json

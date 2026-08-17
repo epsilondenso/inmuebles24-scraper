@@ -2,10 +2,10 @@
 
 search_urls:
   sale:
-    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-guanajuato-provincia-ordenado-por-fechaonline-descendente.html
+    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-zacatecas-provincia-ordenado-por-fechaonline-descendente.html
     page_pattern: "{base}-pagina-{page}.html" # page 1 uses {base}.html
   rent:
-    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-guanajuato-provincia-ordenado-por-fechaonline-descendente.html
+    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-zacatecas-provincia-ordenado-por-fechaonline-descendente.html
     page_pattern: "{base}-pagina-{page}.html"
 scraping:
   max_listing_pages: 1 # null = all pages until empty
@@ -14,7 +14,7 @@ scraping:
   details_per_session: 25 # restart browser every N detail pages
 output:
   directory: "output"
-  urls_file: "Guanajuato_urls.jsonl"
-  details_file: "properties_Guanajuato.xlsx"
-  details_file_csv: "properties_Guanajuato.csv"
-  checkpoint_file: "checkpoint_Guanajuato.json"
+  urls_file: "urls_Zacatecas.json"
+  details_file: "properties_Zacatecas.xlsx"
+  details_file_csv: "properties_Zacatecas.csv"
+  checkpoint_file: "checkpoint_Zacatecas.json"
