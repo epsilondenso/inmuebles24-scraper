@@ -35,3 +35,7 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+#Run files
+output_discover.txt
+scraper.log

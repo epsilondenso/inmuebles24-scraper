@@ -2,19 +2,19 @@
 
 search_urls:
   sale:
-    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-coahuila-ordenado-por-fechaonline-descendente.html
+    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-baja-california-norte-ordenado-por-fechaonline-descendente.html
     page_pattern: "{base}-pagina-{page}.html" # page 1 uses {base}.html
   rent:
-    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-coahuila-ordenado-por-fechaonline-descendente.html
+    base: https://www.inmuebles24.com/casas-o-casa-en-condominio-o-departamentos-en-venta-en-baja-california-norte-ordenado-por-fechaonline-descendente.html
     page_pattern: "{base}-pagina-{page}.html"
 scraping:
-  max_listing_pages: 1 # null = all pages until empty
-  max_properties: 2 # null = no limit
+  max_listing_pages: 50 # null = all pages until empty
+  max_properties: 1500 # null = no limit
   listing_pages_per_session: 4 # restart browser every N pages (anti-bot)
   details_per_session: 25 # restart browser every N detail pages
 output:
   directory: "output"
-  urls_file: "urls_Coahuila.jsonl"
-  details_file: "properties_Coahuila.xlsx"
-  details_file_csv: "properties_Coahuila.csv"
-  checkpoint_file: "checkpoint_Coahuila.json"
+  urls_file: "urls_BajaCalifornia.jsonl"
+  details_file: "properties_BajaCalifornia.xlsx"
+  details_file_csv: "properties_BajaCalifornia.csv"
+  checkpoint_file: "checkpoint_BajaCalifornia.json"
