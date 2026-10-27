@@ -10,6 +10,13 @@ output/
 *.csv
 *.jsonl
 !docs/sample_output_columns.json
+capturas_test/
+*.xlsx
+*.csv
+*.jsonl
+*.png
+!docs/sample_output_columns.json
+
 
 # Browser profiles & debug artifacts
 **/chrome_profile/
@@ -39,3 +46,4 @@ Thumbs.db
 #Run files
 output_discover.txt
 scraper.log
+

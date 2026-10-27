@@ -427,6 +427,9 @@ def extract_property_details(html: str, url: str) -> dict[str, Any]:
 
 
 def build_listing_page_url(base: str, page: int, page_pattern: str) -> str:
+    # Cambio: se quita el ".html" final de base para evitar URLs como
+    # "...html.html" o "...html-pagina-N.html" (rompían la paginación)
+    base = base.removesuffix(".html")
     if page <= 1:
         return f"{base}.html"
     return page_pattern.format(base=base, page=page)

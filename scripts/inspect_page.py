@@ -8,7 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bs4 import BeautifulSoup
 from scraper.browser import BrowserSession
 
-url = "https://www.inmuebles24.com/propiedades/clasificado/veclapin-departamento-cumbres-campanario-monterrey-venta-150326359.html"
+url = "https://www.inmuebles24.com/panel/avisos"
 
 with BrowserSession(headless=False) as s:
     html = s.fetch(url)

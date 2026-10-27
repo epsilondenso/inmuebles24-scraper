@@ -94,4 +94,4 @@ do
 
 done < search_urls.txt 3< states_list.txt
 
-log "Proceso finalizado."
+log "Proceso finalizado."  
